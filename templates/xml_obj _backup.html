@@ -1,0 +1,10 @@
+{% if xml_obj_1 and  xml_obj_2 %}
+    <ul>
+		<li><a href="/xmls/{{ xml_obj_1.id }}/details_ob1">{{ xml_obj_1.object_name }}</a></li>
+		<li><a href="/xmls/{{ xml_obj_2.id }}/details_ob2">{{ xml_obj_2.object_name }}</a></li>
+	</ul>
+	<a href="/xmls/{{ xml_obj_1.id }}_{{ xml_obj_2.id }}/xml_diff">Difference in xmls for {{ xml_obj_1.object_name }} </a>
+{% else %}
+    <p>No objects are available.</p>
+{% endif %}
+	<p/><a href="/xmls/{{ xml_obj_1.id }}_{{ xml_obj_2.id }}/xml_copy">Copy xml 1 to 2 -> {{ xml_obj_1.object_name }} </a>

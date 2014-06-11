@@ -1,0 +1,21 @@
+{% if similiar_list %}
+    <ul>
+	<li><a>{{ similiar_list }}</a></li>
+    {% for i in similiar_list %}
+        <li><a>{{ i }}</a></li>
+    {% endfor %}
+	</ul>
+{% else %}
+    <p>No similiar_list are available.</p>
+{% endif %}
+{% if difference_list %}
+	<ul>
+	
+    {% for i in difference_list %}
+        <li><a>{{ i.xml1 }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No difference_list are available.</p>
+{% endif %}
+
